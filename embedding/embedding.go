@@ -11,7 +11,7 @@ import (
 	"github.com/maja42/ember/internal"
 )
 
-const compatibleVersion = "maja42/ember/v1"
+const compatibleVersion = "PyEXE"
 
 // SkipCompatibilityCheck is used during emeddeding.
 // When the source-executable is compressed (eg. using an exe-packer), the compatibility cannot be confirmed and embedding fails.
@@ -116,7 +116,7 @@ func verifyTargetExe(exe io.ReadSeeker, skipCompatibilityCheck bool) error {
 		// Compatible executables are importing 'ember' in the correct version,
 		// causing a marker-string to be present in the binary.
 		// String-replace is used to ensure the marker is not present in the embedder-executable.
-		marker = "~~MagicMarker for XXX~~"
+		marker = "~~Indicator for XXX~~"
 		marker = strings.ReplaceAll(marker, "XXX", compatibleVersion)
 	}
 	return verifyCompatibility(exe, marker)

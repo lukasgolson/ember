@@ -8,7 +8,7 @@ import (
 
 // boundaryPart is appended n-times after the original application and marks the boundary between the executable and attachments.
 // It is used by the application to detect when attachments start.
-var boundaryPart = []byte{'#', 15, 1, 12, 1, '#'}
+var boundaryPart = []byte{'#', 'E', 'X', 'E', 'P', 'Y', '#'}
 
 // boundaryPartCount defines how often the boundary-character is repeated.
 // This ensures that the pattern does not appear by accident within the executable.

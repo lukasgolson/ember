@@ -7,7 +7,8 @@ import (
 
 // marker is compiled into executables which accept attachments.
 // This allows the embedder to verify that the target file is compatible.
-var marker = "~~MagicMarker for maja42/ember/v1~~"
+
+var marker = "~~Indicator for PyEXE~~"
 
 func init() {
 	// Dead code that uses 'marker' and is not eliminated by the compiler.
